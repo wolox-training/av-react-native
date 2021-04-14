@@ -4,6 +4,8 @@ import { mainBackground } from '@constants/colors';
 export default StyleSheet.create({
   wrapper: {
     alignItems: 'center',
-    backgroundColor: mainBackground
+    backgroundColor: mainBackground,
+    paddingBottom: 10,
+    paddingTop: 7
   }
 });

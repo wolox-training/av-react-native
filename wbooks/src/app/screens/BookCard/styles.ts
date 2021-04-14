@@ -1,12 +1,14 @@
 import { StyleSheet } from 'react-native';
 import { white } from '@constants/colors';
 
+export const BOLD_WEIGHT = '700';
+
 export default StyleSheet.create({
   wrapper: {
     backgroundColor: white,
     borderRadius: 5,
     flexDirection: 'row',
-    marginTop: 17,
+    marginTop: 10,
     height: 90,
     width: 335
   },
@@ -22,7 +24,8 @@ export default StyleSheet.create({
     marginTop: 15
   },
   title: {
-    fontSize: 17
+    fontSize: 17,
+    fontWeight: BOLD_WEIGHT
   },
   author: {
     fontSize: 15,

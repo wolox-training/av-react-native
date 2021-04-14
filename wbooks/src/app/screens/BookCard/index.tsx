@@ -1,16 +1,17 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
+import { Book } from '@interfaces/books';
 
 import styles from './styles';
 import bookImgPlaceholder from './assets/img_book_placeholder.png';
 
-interface Props {
+interface Props extends Partial<Book> {
   imageUrl: string | null;
   title: string;
   author: string;
 }
 
-function Book({ imageUrl, title, author }: Props) {
+function BookCard({ imageUrl, title, author }: Props) {
   return (
     <View style={styles.wrapper}>
       <Image source={imageUrl ? { uri: imageUrl } : bookImgPlaceholder} style={styles.image} />
@@ -22,4 +23,4 @@ function Book({ imageUrl, title, author }: Props) {
   );
 }
 
-export default Book;
+export default BookCard;
