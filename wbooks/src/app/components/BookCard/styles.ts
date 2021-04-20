@@ -1,31 +1,27 @@
 import { StyleSheet } from 'react-native';
 import { white } from '@constants/colors';
+import { BOLD_WEIGHT } from '@constants/fonts';
 
 export default StyleSheet.create({
   wrapper: {
     backgroundColor: white,
     borderRadius: 5,
     flexDirection: 'row',
-    marginTop: 17,
+    paddingHorizontal: 30,
+    paddingVertical: 15,
     height: 90,
-    width: 335
+    width: '100%'
   },
   image: {
     height: 60,
-    width: 40,
-    marginLeft: 30,
-    marginVertical: 15
+    width: 40
   },
   textWrapper: {
     flex: 1,
-    marginLeft: 20,
-    marginTop: 15
+    paddingLeft: 20
   },
   title: {
-    fontSize: 17
-  },
-  author: {
-    fontSize: 15,
-    marginTop: 3
+    fontSize: 17,
+    fontWeight: BOLD_WEIGHT
   }
 });
