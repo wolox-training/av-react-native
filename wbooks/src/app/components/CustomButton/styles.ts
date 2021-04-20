@@ -6,11 +6,11 @@ export default StyleSheet.create({
     borderRadius: 100,
     height: 45,
     justifyContent: 'center',
-    width: '100%',
+    width: '100%'
   },
   bordered: {
     borderWidth: 1,
-    borderColor: cerulean,
+    borderColor: cerulean
   },
   disabled: {
     backgroundColor: silver,

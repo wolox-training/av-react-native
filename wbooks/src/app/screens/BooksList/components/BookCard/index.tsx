@@ -17,7 +17,7 @@ interface Props extends Partial<Book> {
 
 function BookCard({ id, imageUrl, title, author }: Props) {
   const navigation = useNavigation();
-  
+
   const onBookClicked = () => navigation.navigate(routes.BookDetail, { bookId: id });
 
   return (

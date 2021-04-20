@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
-import backIcon from'@assets/ic_back.png';
+import backIcon from '@assets/ic_back.png';
 
 import styles from './styles';
 
@@ -11,15 +11,13 @@ function HeaderBackButton() {
 
   const handleOnClick = () => navigation.goBack();
 
-  return (
-    canGoBack ? 
-    (
+  return canGoBack ? (
     <TouchableOpacity onPress={handleOnClick} style={styles.wrapper}>
-      <Image source={backIcon} style={styles.button}/>
+      <Image source={backIcon} style={styles.button} />
     </TouchableOpacity>
-    ) :
-    (<View />)
-  )
+  ) : (
+    <View />
+  );
 }
 
 export default HeaderBackButton;

@@ -5,6 +5,6 @@ export default StyleSheet.create({
     paddingLeft: 15
   },
   button: {
-    height: 20,
-  },
+    height: 20
+  }
 });

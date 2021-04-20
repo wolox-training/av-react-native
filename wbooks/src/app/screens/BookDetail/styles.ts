@@ -16,14 +16,14 @@ export default StyleSheet.create({
     paddingBottom: 22,
     paddingTop: 12,
     paddingHorizontal: 12,
-    width: '100%',
+    width: '100%'
   },
   bookWrapper: {
     flexDirection: 'row'
   },
   bookImg: {
     height: 140,
-    width: 100,
+    width: 100
   },
   bookInfoWrapper: {
     paddingLeft: 10

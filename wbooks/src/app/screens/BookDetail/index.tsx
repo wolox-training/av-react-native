@@ -11,8 +11,8 @@ import styles from './styles';
 type ParamList = {
   bookDetail: {
     bookId: number;
-  }
-}
+  };
+};
 
 function BookDetail() {
   const route = useRoute<RouteProp<ParamList, 'bookDetail'>>();
@@ -23,7 +23,10 @@ function BookDetail() {
     <View style={styles.wrapper}>
       <View style={styles.firstSection}>
         <View style={styles.bookWrapper}>
-          <Image source={bookData?.imageUrl ? { uri: bookData.imageUrl } : bookImgPlaceholder} style={styles.bookImg} />
+          <Image
+            source={bookData?.imageUrl ? { uri: bookData.imageUrl } : bookImgPlaceholder}
+            style={styles.bookImg}
+          />
           <View style={styles.bookInfoWrapper}>
             <Text style={styles.bookTitle}>{bookData?.title}</Text>
             <Text style={styles.bookData}>{bookData?.author}</Text>
@@ -37,7 +40,7 @@ function BookDetail() {
         </View>
       </View>
     </View>
-  )
+  );
 }
 
 export default BookDetail;
