@@ -1,11 +1,11 @@
 import { StyleSheet } from 'react-native';
-import { mainBackground } from '@constants/colors';
+import { cerulean, white } from '@constants/colors';
+
+export const BOLD_WEIGHT = '700';
 
 export default StyleSheet.create({
-  wrapper: {
-    alignItems: 'center',
-    backgroundColor: mainBackground,
-    paddingBottom: 10,
-    paddingTop: 7
-  }
+  headerStyle: {
+    backgroundColor: cerulean,
+    height: 100
+  },
 });
