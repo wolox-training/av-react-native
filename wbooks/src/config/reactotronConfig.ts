@@ -16,7 +16,7 @@ declare global {
 if (__DEV__) {
   const { scriptURL } = NativeModules.SourceCode;
   const scriptHostname = scriptURL.split('://')[1].split(':')[0];
-  Reactotron.configure({ name: 'appName', host: scriptHostname })
+  Reactotron.configure({ name: 'wbooks', host: scriptHostname })
     .use(trackGlobalErrors())
     .use(overlay())
     .connect();

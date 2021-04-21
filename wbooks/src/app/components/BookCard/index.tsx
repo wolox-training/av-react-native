@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Image } from 'react-native';
+import CustomText from '@components/CustomText';
 import { Book } from '@interfaces/books';
 
 import styles from './styles';
@@ -16,8 +17,8 @@ function BookCard({ imageUrl, title, author }: Props) {
     <View style={styles.wrapper}>
       <Image source={imageUrl ? { uri: imageUrl } : bookImgPlaceholder} style={styles.image} />
       <View style={styles.textWrapper}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.author}>{author}</Text>
+        <CustomText style={styles.title} text={title} />
+        <CustomText text={author} />
       </View>
     </View>
   );

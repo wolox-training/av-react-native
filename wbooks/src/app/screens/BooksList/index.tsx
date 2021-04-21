@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList, ListRenderItem } from 'react-native';
 import { BOOKS_MOCK } from '@constants/mockBooks';
 import { Book } from '@interfaces/books';
-import BookCard from '@screens/BookCard';
+import BookCard from '@components/BookCard';
 
 function BooksList() {
   const renderItem: ListRenderItem<Book> = ({ item: { imageUrl, title, author } }) => (

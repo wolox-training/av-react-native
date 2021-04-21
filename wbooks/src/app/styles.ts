@@ -2,10 +2,13 @@ import { StyleSheet } from 'react-native';
 import { mainBackground } from '@constants/colors';
 
 export default StyleSheet.create({
-  wrapper: {
-    alignItems: 'center',
+  mainWrapper: {
     backgroundColor: mainBackground,
+    flex: 1
+  },
+  wrapper: {
+    paddingHorizontal: 20,
     paddingBottom: 10,
-    paddingTop: 7
+    paddingTop: 15
   }
 });
