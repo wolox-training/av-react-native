@@ -8,9 +8,7 @@ export default StyleSheet.create({
     borderRadius: 5,
     flexDirection: 'row',
     paddingHorizontal: 30,
-    paddingVertical: 15,
-    height: 90,
-    width: '100%'
+    paddingVertical: 15
   },
   image: {
     height: 60,
