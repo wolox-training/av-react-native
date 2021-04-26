@@ -6,11 +6,12 @@ import styles from './styles';
 interface Props {
   text: string;
   style?: TextStyle;
+  lineNumber?: number;
 }
 
-function CustomText({ text, style }: Props) {
+function CustomText({ text, style, lineNumber = 1 }: Props) {
   return (
-    <Text style={[styles.text, style]} numberOfLines={1}>
+    <Text style={[styles.text, style]} numberOfLines={lineNumber}>
       {text}
     </Text>
   );
