@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, ListRenderItem, View } from 'react-native';
+import { FlatList, ListRenderItem, SafeAreaView } from 'react-native';
 import { BOOKS_MOCK } from '@constants/mockBooks';
 import { Book } from '@interfaces/books';
 import BookCard from '@components/BookCard';
@@ -13,9 +13,9 @@ function BooksList() {
   const keyExtractor = ({ id }: Book) => String(id);
 
   return (
-    <View style={styles.wrapper}>
+    <SafeAreaView style={styles.wrapper}>
       <FlatList data={BOOKS_MOCK} renderItem={renderItem} keyExtractor={keyExtractor} />
-    </View>
+    </SafeAreaView>
   );
 }
 

@@ -7,7 +7,7 @@ import routes from '@constants/routes';
 import bookImgPlaceholder from '@assets/img_book_placeholder.png';
 import CustomText from '@components/CustomText';
 
-import styles from './styles';
+import styles, { oneLineText } from './styles';
 
 interface Props extends Partial<Book> {
   id: number;
@@ -26,7 +26,7 @@ function BookCard({ id, imageUrl, title, author }: Props) {
       <View style={styles.wrapper}>
         <Image source={imageUrl ? { uri: imageUrl } : bookImgPlaceholder} style={styles.image} />
         <View style={styles.textWrapper}>
-          <CustomText text={title} style={styles.title} />
+          <CustomText text={title} style={styles.title} textProps={oneLineText} />
           <CustomText text={author} />
         </View>
       </View>
