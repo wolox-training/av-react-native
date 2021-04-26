@@ -3,7 +3,7 @@ import { View, Image } from 'react-native';
 import CustomText from '@components/CustomText';
 import { Book } from '@interfaces/books';
 
-import styles from './styles';
+import styles, { oneLineText } from './styles';
 import bookImgPlaceholder from './assets/img_book_placeholder.png';
 
 interface Props extends Partial<Book> {
@@ -17,7 +17,7 @@ function BookCard({ imageUrl, title, author }: Props) {
     <View style={styles.wrapper}>
       <Image source={imageUrl ? { uri: imageUrl } : bookImgPlaceholder} style={styles.image} />
       <View style={styles.textWrapper}>
-        <CustomText style={styles.title} text={title} />
+        <CustomText style={styles.title} text={title} textProps={oneLineText} />
         <CustomText text={author} />
       </View>
     </View>
