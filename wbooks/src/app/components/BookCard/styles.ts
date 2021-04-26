@@ -16,7 +16,6 @@ export default StyleSheet.create({
     width: 40
   },
   textWrapper: {
-    flex: 1,
     paddingLeft: 20
   },
   title: {

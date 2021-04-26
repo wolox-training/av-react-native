@@ -9,7 +9,11 @@ interface Props {
 }
 
 function CustomText({ text, style }: Props) {
-  return <Text style={[styles.text, style]}>{text}</Text>;
+  return (
+    <Text style={[styles.text, style]} numberOfLines={1}>
+      {text}
+    </Text>
+  );
 }
 
 export default CustomText;
