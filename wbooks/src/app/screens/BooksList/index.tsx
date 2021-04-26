@@ -2,8 +2,8 @@ import React from 'react';
 import { FlatList, ListRenderItem, View } from 'react-native';
 import { BOOKS_MOCK } from '@constants/mockBooks';
 import { Book } from '@interfaces/books';
+import BookCard from '@components/BookCard';
 
-import BookCard from './components/BookCard';
 import styles from './styles';
 
 function BooksList() {

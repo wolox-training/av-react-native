@@ -1,7 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { polar, white } from '@constants/colors';
-
-export const BOLD_WEIGHT = '700';
+import { BOLD_WEIGHT } from '@constants/fonts';
 
 export default StyleSheet.create({
   wrapper: {
@@ -26,7 +25,8 @@ export default StyleSheet.create({
     width: 100
   },
   bookInfoWrapper: {
-    paddingLeft: 10
+    paddingLeft: 10,
+    flex: 1
   },
   bookTitle: {
     fontSize: 24,

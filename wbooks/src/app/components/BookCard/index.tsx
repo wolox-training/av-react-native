@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Book } from '@interfaces/books';
 import { useNavigation } from '@react-navigation/native';
 import routes from '@constants/routes';
 import bookImgPlaceholder from '@assets/img_book_placeholder.png';
+import CustomText from '@components/CustomText';
 
 import styles from './styles';
 
@@ -25,8 +26,8 @@ function BookCard({ id, imageUrl, title, author }: Props) {
       <View style={styles.wrapper}>
         <Image source={imageUrl ? { uri: imageUrl } : bookImgPlaceholder} style={styles.image} />
         <View style={styles.textWrapper}>
-          <Text style={styles.title}>{title}</Text>
-          <Text style={styles.author}>{author}</Text>
+          <CustomText text={title} style={styles.title} />
+          <CustomText text={author} />
         </View>
       </View>
     </TouchableOpacity>

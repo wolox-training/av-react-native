@@ -7,6 +7,7 @@ import bookImgPlaceholder from '@assets/img_book_placeholder.png';
 import CustomButton from '@app/components/CustomButton';
 
 import styles from './styles';
+import './i18n';
 
 type ParamList = {
   bookDetail: {
@@ -28,7 +29,9 @@ function BookDetail() {
             style={styles.bookImg}
           />
           <View style={styles.bookInfoWrapper}>
-            <Text style={styles.bookTitle}>{bookData?.title}</Text>
+            <Text style={styles.bookTitle} numberOfLines={1}>
+              {bookData?.title}
+            </Text>
             <Text style={styles.bookData}>{bookData?.author}</Text>
             <Text style={styles.bookData}>{bookData?.publisher}</Text>
             <Text style={styles.bookData}>{bookData?.year}</Text>
