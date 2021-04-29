@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { polar } from '@constants/colors';
+import { cerulean, polar } from '@constants/colors';
 
 export default StyleSheet.create({
   wrapper: {
@@ -8,5 +8,9 @@ export default StyleSheet.create({
     paddingHorizontal: 20,
     paddingBottom: 10,
     paddingTop: 10
+  },
+  headerStyle: {
+    backgroundColor: cerulean,
+    height: 100
   }
 });
