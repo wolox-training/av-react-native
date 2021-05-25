@@ -11,11 +11,9 @@ export default StyleSheet.create({
   firstSection: {
     backgroundColor: white,
     borderRadius: 5,
-    minHeight: 270,
     paddingBottom: 22,
     paddingTop: 12,
-    paddingHorizontal: 12,
-    width: '100%'
+    paddingHorizontal: 12
   },
   bookWrapper: {
     flexDirection: 'row'

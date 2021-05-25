@@ -7,9 +7,7 @@ import BookCard from '@components/BookCard';
 import styles from './styles';
 
 function BooksList() {
-  const renderItem: ListRenderItem<Book> = ({ item: { id, imageUrl, title, author } }) => (
-    <BookCard id={id} imageUrl={imageUrl} title={title} author={author} />
-  );
+  const renderItem: ListRenderItem<Book> = ({ item }) => <BookCard book={item} />;
   const keyExtractor = ({ id }: Book) => String(id);
 
   return (
