@@ -9,7 +9,7 @@ export default StyleSheet.create({
     backgroundColor: white,
     borderRadius: 5,
     flexDirection: 'row',
-    marginTop: 10,
+    marginTop: 7,
     paddingHorizontal: 30,
     paddingVertical: 15
   },

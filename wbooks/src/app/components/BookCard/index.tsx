@@ -1,26 +1,31 @@
 import React from 'react';
-import { View, Image } from 'react-native';
-import CustomText from '@components/CustomText';
+import { View, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { Book } from '@interfaces/books';
+import routes from '@constants/routes';
+import bookImgPlaceholder from '@assets/img_book_placeholder.png';
+import CustomText from '@components/CustomText';
 
 import styles, { oneLineText } from './styles';
-import bookImgPlaceholder from './assets/img_book_placeholder.png';
 
 interface Props extends Partial<Book> {
-  imageUrl: string | null;
-  title: string;
-  author: string;
+  book: Book;
 }
 
-function BookCard({ imageUrl, title, author }: Props) {
+function BookCard({ book }: Props) {
+  const { imageUrl, title, author } = book;
+  const navigation = useNavigation();
+
+  const onBookClicked = () => navigation.navigate(routes.BookDetail, { book });
+
   return (
-    <View style={styles.wrapper}>
+    <TouchableOpacity onPress={onBookClicked} style={styles.wrapper}>
       <Image source={imageUrl ? { uri: imageUrl } : bookImgPlaceholder} style={styles.image} />
       <View style={styles.textWrapper}>
-        <CustomText style={styles.title} text={title} textProps={oneLineText} />
+        <CustomText text={title} style={styles.title} textProps={oneLineText} />
         <CustomText text={author} />
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 

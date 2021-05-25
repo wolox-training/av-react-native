@@ -7,20 +7,12 @@ import BookCard from '@components/BookCard';
 import styles from './styles';
 
 function BooksList() {
-  const renderItem: ListRenderItem<Book> = ({ item: { imageUrl, title, author } }) => (
-    <BookCard imageUrl={imageUrl} title={title} author={author} />
-  );
-
+  const renderItem: ListRenderItem<Book> = ({ item }) => <BookCard book={item} />;
   const keyExtractor = ({ id }: Book) => String(id);
 
   return (
-    <SafeAreaView style={styles.mainWrapper}>
-      <FlatList
-        data={BOOKS_MOCK}
-        renderItem={renderItem}
-        keyExtractor={keyExtractor}
-        style={styles.wrapper}
-      />
+    <SafeAreaView style={styles.wrapper}>
+      <FlatList data={BOOKS_MOCK} renderItem={renderItem} keyExtractor={keyExtractor} />
     </SafeAreaView>
   );
 }
